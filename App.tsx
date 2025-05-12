@@ -12,15 +12,10 @@ function App(): React.JSX.Element {
         <Text preset="headingLarge" italic>
           Test
         </Text>
+        <Button marginBottom="s20" title="Primary" preset="primary" disabled />
         <Button marginBottom="s20" title="Primary" preset="primary" />
         <Button loading marginBottom="s20" title="Outline" preset="outline" />
-        <Button
-          loading
-          marginBottom="s20"
-          title="Secondary"
-          preset="secondary"
-        />
-
+        <Button loading marginBottom="s20" title="Loding" disabled />
         <Button loading title="Loding" />
       </SafeAreaView>
     </ThemeProvider>
