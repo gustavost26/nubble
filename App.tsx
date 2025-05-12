@@ -13,8 +13,13 @@ function App(): React.JSX.Element {
           Test
         </Text>
         <Button marginBottom="s20" title="Primary" preset="primary" />
-        <Button marginBottom="s20" title="Outline" preset="outline" />
-        <Button marginBottom="s20" title="Secondary" preset="secondary" />
+        <Button loading marginBottom="s20" title="Outline" preset="outline" />
+        <Button
+          loading
+          marginBottom="s20"
+          title="Secondary"
+          preset="secondary"
+        />
 
         <Button loading title="Loding" />
       </SafeAreaView>
