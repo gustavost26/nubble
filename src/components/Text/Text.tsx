@@ -1,11 +1,12 @@
+import {createText} from '@shopify/restyle';
 import React from 'react';
-import {
-  Text as RNText,
-  TextProps as RNTextProps,
-  TextStyle,
-} from 'react-native';
+import {TextStyle} from 'react-native';
+import {Theme} from '../../theme/theme';
 
-interface TextProps extends RNTextProps {
+const SRText = createText<Theme>();
+type SRTextProps = React.ComponentProps<typeof SRText>;
+
+interface TextProps extends SRTextProps {
   variant?: TextVariants;
   bold?: boolean;
   italic?: boolean;
@@ -19,14 +20,17 @@ export function Text({
   italic,
   semiBold,
   style,
-  ...props
+  ...sRTextProps
 }: TextProps) {
   const fontFamily = getFontFamily(preset, bold, italic, semiBold);
 
   return (
-    <RNText style={[$fontSizes[preset], {fontFamily}, style]} {...props}>
+    <SRText
+      color="backgroundContrast"
+      style={[$fontSizes[preset], {fontFamily}, style]}
+      {...sRTextProps}>
       {children}
-    </RNText>
+    </SRText>
   );
 }
 
