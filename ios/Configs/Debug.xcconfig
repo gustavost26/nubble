@@ -1,0 +1,7 @@
+#include? "Pods/Target Support Files/Pods-nubble/Pods-nubble.debug.xcconfig"
+
+SUPPORTED_PLATFORMS = iphonesimulator iphoneos
+SUPPORTS_MACCATALYST = NO
+SDKROOT = iphoneos
+ONLY_ACTIVE_ARCH = YES
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
