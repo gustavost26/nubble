@@ -1,4 +1,0 @@
-SDKROOT = iphoneos
-SUPPORTED_PLATFORMS = iphonesimulator iphoneos
-SUPPORTS_MACCATALYST = NO
-EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
