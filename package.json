@@ -53,7 +53,8 @@
       "refactor",
       "style",
       "test",
-      "revert"
+      "revert",
+      "chore"
     ],
     "scope": "\\S+.*"
   },
