@@ -9,7 +9,7 @@ interface ButtonProps extends TouchableOpacityBoxProps {
   title: string;
   loading?: boolean;
   preset?: ButtonPreset;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 export function Button({

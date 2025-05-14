@@ -12,7 +12,7 @@ import {useAppTheme} from '../../hooks/useAppTheme';
 
 interface TextInputProps extends RNTextInputProps {
   label: string;
-  errorMessage: string;
+  errorMessage?: string;
   RightComponent?: React.ReactElement;
   boxProps?: BoxProps;
 }
