@@ -1,13 +1,10 @@
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Box} from '../Box/Box';
 import {useAppTheme} from '../../../src/hooks/useAppTheme';
 import {useAppSafeArea} from '../../hooks/useAppSafeArea';
 import {Icon} from '../Icon/Icon';
 import {Text} from '../Text/Text';
-import {KeyboardAvoidingView, Platform, ScrollView} from 'react-native';
+import {KeyboardAvoidingView, Platform} from 'react-native';
 import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
-import {color} from '@shopify/restyle';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 interface ScreenProps {
   children: React.ReactNode;
