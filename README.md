@@ -1,97 +1,94 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Pomodoro App
 
-# Getting Started
+Desenvolvimento de uma rede social, projeto para estudo e desenvolvimento com React Native CLI.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🔨 Funcionalidades pretendida para o projeto
 
-## Step 1: Start Metro
+- Criação de conta e gerenciamento do perfil;
+  - Edição de nome, email, foto, e alteração de senha;
+- Recuperação de senha;
+- Publicação e gerenciamento de posts.
+- Favoritar posts.
+- Comentário de posts;
+- Gerenciamento de seguidos e seguidores;
+- Chat - Gerenciamento de conversa;
+- Notificações;
+- Tela de Onboard;
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## ✔️ Técnicas e tecnologias utilizadas
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+O desenvolvimento do projeto envolve as seguintes tecnologias e técnicas:
 
-```sh
-# Using npm
-npm start
+- **`useState` e `useRef`**: Gerenciamento de estado e referência.
+- **Componentização**: Criação de componentes reutilizáveis e personalizaveis como `Text`, `TextInput`, `Screem` e `Box`.
+- **`Shopify Restyle`**: Estilização customizada para layouts e interatividade.
+- **Imagens e SVGs**: Utilização de imagens locais e ícones SVG personalizados.
+- **React Native CLI**: Configuração e execução do projeto.
 
-# OR using Yarn
+## ✔️ Tecnologias que serão integradas ao longo do projeto:
+
+- [Jest](https://jestjs.io/) e [React Native Testing Library](https://callstack.github.io/react-native-testing-library/)
+- CI/CD com [Fastlane](https://fastlane.tools/) e [GitHub Actions](https://github.com/features/actions)
+- [React Hook Form](https://react-hook-form.com/) e [Zod](https://zod.dev/)
+- [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction)
+- [TanStack Query (React Query)](https://tanstack.com/query/latest)
+- [React Native MMKV](https://github.com/mrousavy/react-native-mmkv)
+- [Husky](https://typicode.github.io/husky/)
+- [React Native Vision Camera](https://react-native-vision-camera.com/docs/guides)
+
+## 🛠️ Abrir e rodar o projeto
+
+Após baixar o projeto, siga os passos abaixo para executá-lo:
+
+1. Certifique-se de que possui o ambiente de desenvolvimento React Native configurado ([guia oficial](https://reactnative.dev/docs/getting-started-without-a-framework)).
+
+2. No terminal, navegue até a pasta do projeto e instale as dependências:
+
+```bash
+yarn install
+```
+
+3. Execute o projeto:
+
+```bash
 yarn start
 ```
 
-## Step 2: Build and run your app
+# Contribuição
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-### Android
+Passos para contribuir:
 
-```sh
-# Using npm
-npm run android
+1. **Faça um fork do projeto**.
 
-# OR using Yarn
-yarn android
+No GitHub, clique em "Fork" no canto superior direito da página do repositório.
+
+2. **Clone o repositório forkado**:
+
+```bash
+git clone https://github.com/seu-usuario/nubble.git
 ```
 
-### iOS
+3. **Crie uma nova branch**:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+Copiar código
+git checkout -b feature/nova-funcionalidade
 ```
 
-Then, and every time you update your native dependencies, run:
+4. **Commit suas mudanças**:
 
-```sh
-bundle exec pod install
+```bash
+git commit -m 'Adiciona nova funcionalidade'
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+5. **Envie para o seu fork no GitHub**:
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```bash
+git push origin feature/nova-funcionalidade
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+6. **Abra um pull request**:
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- No GitHub, vá até o seu fork e clique em "Compare & Pull Request".
