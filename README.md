@@ -21,7 +21,7 @@ O desenvolvimento do projeto envolve as seguintes tecnologias e técnicas:
 
 - **`useState` e `useRef`**: Gerenciamento de estado e referência.
 - **Componentização**: Criação de componentes reutilizáveis e personalizaveis como `Text`, `TextInput`, `Screem` e `Box`.
-- **`Shopify Restyle`**: Estilização customizada para layouts e interatividade.
+- **Shopify Restyle**: Estilização customizada para layouts e interatividade.
 - **Imagens e SVGs**: Utilização de imagens locais e ícones SVG personalizados.
 - **React Native CLI**: Configuração e execução do projeto.
 
