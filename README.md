@@ -1,4 +1,4 @@
-# Pomodoro App
+# App
 
 Desenvolvimento de uma rede social, projeto para estudo e desenvolvimento com React Native CLI.
 
