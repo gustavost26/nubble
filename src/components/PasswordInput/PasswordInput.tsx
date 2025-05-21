@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {TextInput, TextInputProps} from '../TextInput/TextInput';
 import {Icon} from '../Icon/Icon';
 
-type PasswordInpuntProps = Omit<
+export type PasswordInpuntProps = Omit<
   TextInputProps,
   'RightComponent' | 'secureTextEntry'
 >;
