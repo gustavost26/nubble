@@ -14,17 +14,21 @@
     "rm-derivedData": "rm -rf ~/Library/Developer/Xcode/DerivedData",
     "rm-pods": "cd ios && rm -rf Pods Podfile.lock build && yarn rm-derivedData",
     "open": "open ios/nubble.xcworkspace/",
-    "open2": "cd ios && xed ."
+    "open2": "cd ios && xed .",
+    "gradlew-verify": "cd android && ./gradlew build --warning-mode=all"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
     "@react-navigation/native": "^7.1.9",
     "@react-navigation/native-stack": "^7.3.13",
     "@shopify/restyle": "^2.4.5",
     "react": "19.0.0",
+    "react-hook-form": "^7.56.4",
     "react-native": "0.79.0",
     "react-native-safe-area-context": "^5.4.0",
     "react-native-screens": "^4.10.0",
-    "react-native-svg": "^15.12.0"
+    "react-native-svg": "^15.12.0",
+    "zod": "^3.25.17"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
