@@ -24,17 +24,17 @@ export function SignUpScreen({navigation}: ScreenProps) {
     mode: 'onChange',
   });
 
-  function submitForm(formValue: sigUpSchema) {
-    console.log(formValue);
+  function submitForm(formValues: SignUpSchema) {
+    console.log(formValues);
 
-    // navigation.navigate('SuccessScreen', {
-    //   title: 'Sua conta foi criada com sucesso!',
-    //   description: 'Agora é só fazer login na nossa plataforma',
-    //   icon: {
-    //     name: 'checkRound',
-    //     color: 'success',
-    //   },
-    // });
+    navigation.navigate('SuccessScreen', {
+      title: 'Sua conta foi criada com sucesso!',
+      description: 'Agora é só fazer login na nossa plataforma',
+      icon: {
+        name: 'checkRound',
+        color: 'success',
+      },
+    });
   }
   return (
     <Screen canGoBack scrollable>
@@ -44,7 +44,6 @@ export function SignUpScreen({navigation}: ScreenProps) {
       <FormTextInput
         control={control}
         name="username"
-        rules={{required: 'Username obrigatorio'}}
         label="Seu username"
         placeholder="@"
         boxProps={{mb: 's20'}}
@@ -53,7 +52,6 @@ export function SignUpScreen({navigation}: ScreenProps) {
       <FormTextInput
         control={control}
         name="fullName"
-        rules={{required: 'Nome obrigatorio'}}
         autoCapitalize="words"
         label="Nome Completo"
         placeholder="Digite seu nome"
@@ -63,13 +61,6 @@ export function SignUpScreen({navigation}: ScreenProps) {
       <FormTextInput
         control={control}
         name="email"
-        rules={{
-          required: 'E-mail obrigatorio',
-          pattern: {
-            value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-            message: 'E-mail inválido',
-          },
-        }}
         label="E-mail"
         placeholder="Digite seu e-mail"
         boxProps={{mb: 's20'}}
@@ -78,13 +69,6 @@ export function SignUpScreen({navigation}: ScreenProps) {
       <FormPasswordInput
         control={control}
         name="password"
-        rules={{
-          required: 'Senha obrigatoria',
-          minLength: {
-            value: 8,
-            message: 'Senha deve ter no mínimo 8 caracteres',
-          },
-        }}
         label="Senha"
         placeholder="Digite sua senha"
         boxProps={{mb: 's48'}}
