@@ -1,5 +1,9 @@
 import React from 'react';
+
+import {zodResolver} from '@hookform/resolvers/zod';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useForm} from 'react-hook-form';
+
 import {
   Screen,
   Text,
@@ -7,14 +11,14 @@ import {
   FormPasswordInput,
   FormTextInput,
 } from '@components';
-import {RootStackParamList} from '@routes';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {sigUpSchema, SignUpSchema} from './signUpSchema';
-import {zodResolver} from '@hookform/resolvers/zod';
 import {useResetNavigationSuccess} from '@hooks';
+import {RootStackParamList} from '@routes';
+
+import {sigUpSchema, SignUpSchema} from './signUpSchema';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function SignUpScreen({navigation}: ScreenProps) {
   const {reset} = useResetNavigationSuccess();
   const {control, formState, handleSubmit} = useForm<SignUpSchema>({
