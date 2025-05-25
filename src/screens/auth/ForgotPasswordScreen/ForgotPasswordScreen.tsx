@@ -1,15 +1,14 @@
+import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {Button} from '../../../components/Button/Button';
-import {Screen} from '../../../components/Screen/Screen';
-import {Text} from '../../../components/Text/Text';
-import {RootStackParamList} from '../../../routes/Routes';
-import {FormTextInput} from '../../../components/Form/FormTextInput';
 import {useForm} from 'react-hook-form';
+import {RootStackParamList} from '@routes';
+import {FormTextInput, Text, Screen, Button} from '@components';
 import {
   forgotPasswordSchema,
   ForgotPasswordSchema,
 } from './ForgotPasswordSchema';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {useResetNavigationSuccess} from '@hooks';
 
 type ScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -17,6 +16,7 @@ type ScreenProps = NativeStackScreenProps<
 >;
 
 export function ForgotPasswordScreen({navigation}: ScreenProps) {
+  const {reset} = useResetNavigationSuccess();
   const {control, formState, handleSubmit} = useForm<ForgotPasswordSchema>({
     resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
@@ -26,10 +26,8 @@ export function ForgotPasswordScreen({navigation}: ScreenProps) {
   });
 
   function submitForm(values: ForgotPasswordSchema) {
-    console.log(values);
-    // TODO: Implementar
-    navigation.navigate('SuccessScreen', {
-      title: `Enviamos as instruções para seu e-mail`,
+    reset({
+      title: `Enviamos as instruções ${`\n`}para seu e-mail`,
       description:
         'Clique no link enviado no seu e-mail para recuperar sua senha',
       icon: {
