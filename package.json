@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
     "start": "react-native start",
     "test": "jest",
     "pods-deintegrate": "cd ios && bundle exec pod deintegrate",
@@ -15,7 +16,8 @@
     "rm-pods": "cd ios && rm -rf Pods Podfile.lock build && yarn rm-derivedData",
     "open": "open ios/nubble.xcworkspace/",
     "open2": "cd ios && xed .",
-    "gradlew-verify": "cd android && ./gradlew build --warning-mode=all"
+    "gradlew-verify": "cd android && ./gradlew build --warning-mode=all",
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -47,6 +49,7 @@
     "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "^8.19.0",
     "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "19.0.0",

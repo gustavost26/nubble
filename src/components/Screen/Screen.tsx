@@ -8,7 +8,6 @@ import {useAppSafeArea, useAppTheme} from '@hooks';
 
 import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
 
-
 interface ScreenProps {
   children: React.ReactNode;
   canGoBack?: boolean;
